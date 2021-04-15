@@ -1,0 +1,26 @@
+1/ cài đặt project :
+  npx create-react-app ten-app
+2/ chạy project :
+  npm run start
+
+3/ flow code của ReactJS
+  index.html ( chú ý id = "root" )
+
+  => index.js ( chú ý <App >)
+  => App.js ( chú ý return của function App )
+
+
+4/ ReactJS không đọc được file html , mà chỉ đọc được file JSX 
+
+5/ JSX giúp chúng ta viết html và js vào một file duy nhất
+
+6/ Lợi ích và tiêu chí để chia components:
+  - tái sử dụng ( ưu tiên ).
+   
+  - dễ quản lý và mở rộng ứng dụng.
+
+
+7/ Có 2 loại component.
+  - Dạng class. 
+
+  - Dạng function.
