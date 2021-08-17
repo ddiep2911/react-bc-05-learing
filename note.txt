@@ -1,26 +1,40 @@
 1/ cài đặt project :
   npx create-react-app ten-app
 2/ chạy project :
-  npm run start
+  2.1/ mở terminal ngay tại file package.json
+  2.2/ gõ lệnh : npm run start
+3/ tài liệu về reactjs : https://reactjs.org/docs/getting-started.html
+4/ flow code reactjs : index.hmtl => index.js => App.js
+5/ reactjs sẽ không hiểu html ,mà nó chỉ hiểu jsx ( class => className )
+6/ lý do dùng component là :
+      - dể quản lý ( chia để trị )
+      - tái sử dụng ( ưu tiên hàng đầu )
+7/ điều kiện để tạo ra một component :
+      - tái sử dụng ( ưu tiên hàng đầu )
+      - dể quản lý ( chia để trị )
+8/ có 2 dạng component :
+      - class
+      - function
+9/ data-binding : là cách đưa biến hay thuộc tính js ra ngoài html
+10/ state :
+      - dùng để lưu những dữ liệu của component
+      - giúp đồng bộ UI và Value của component
+11/ props :
+      - props là thuộc tính của component ( property )
+      - props dùng để truyền data từ component -> component
+12/ để biết state lưu ở component nào :
+      - component đó phải chứa các nút xử lý sự kiện
+      - component đó phải chứa UI để hiển thị ra màn hình
 
-3/ flow code của ReactJS
-  index.html ( chú ý id = "root" )
+13/ state lưu ở component nào thì phải sét lại state ở component đó
 
-  => index.js ( chú ý <App >)
-  => App.js ( chú ý return của function App )
+14/ tại sao lại dùng redux ( trình bày bất lợi trước khi dùng redux, và lợi ích sau khi dùng redux )
 
-
-4/ ReactJS không đọc được file html , mà chỉ đọc được file JSX 
-
-5/ JSX giúp chúng ta viết html và js vào một file duy nhất
-
-6/ Lợi ích và tiêu chí để chia components:
-  - tái sử dụng ( ưu tiên ).
-   
-  - dễ quản lý và mở rộng ứng dụng.
-
-
-7/ Có 2 loại component.
-  - Dạng class. 
-
-  - Dạng function.
+15/ luồng sử lý của redux như thế nào ?
+bonus :
+1/ một webside thường có 2 dạng :
+  - single page application ( chuyễn trang mà ko bị load )
+  - multiple page application (chuyễn trang mà bị load)
+2/ về SEO thì multiple page application tốt hơn single page application
+3/ reactjs (single page application) thì ko SEO tốt nhưng
+ NEXTJS (https://nextjs.org/) giúp reactjs SEO tốt hơn

@@ -1,11 +1,31 @@
 // rce
 
 import React, { Component } from "react";
+import ButtonColor from "./ButtonColor";
+import Car from "./Car";
 
 export class ShowRoomCar extends Component {
   // Hiển thị hình ảnh mặc định lúc đầu
   state = {
     carImg: "./img/car/products/steel-car.jpg",
+    btnColorList: [
+      {
+        name: "black",
+        imgSrc: "./img/car/icons/icon-black.jpg",
+      },
+      {
+        name: "red",
+        imgSrc: "./img/car/icons/icon-red.jpg",
+      },
+      {
+        name: "silver",
+        imgSrc: "./img/car/icons/icon-silver.jpg",
+      },
+      {
+        name: "steel",
+        imgSrc: "./img/car/icons/icon-steel.jpg",
+      },
+    ],
   };
 
   //   carImg = "./img/car/products/steel-car.jpg";   //  Vì ko chạy lại render
@@ -50,6 +70,17 @@ export class ShowRoomCar extends Component {
     console.log(this.carImg);
   };
 
+  renderBtnColorList = () => {
+    return this.state.btnColorList.map((btnColor) => {
+      return (
+        <ButtonColor
+          btnColor={btnColor}
+          handleChoiceColor={this.handleChoiceColor}
+        />
+      );
+    });
+  };
+
   render() {
     return (
       <div>
@@ -57,54 +88,9 @@ export class ShowRoomCar extends Component {
           <h2 className="text-center">Bài Tập Chọn Màu Xe</h2>
           <div className="container">
             <div className="chose__color d-flex justify-content-around">
-              <button
-                className="btn"
-                onClick={() => this.handleChoiceColor("black")}
-              >
-                <img
-                  src="./img/car/icons/icon-black.jpg"
-                  alt="hinh"
-                  style={{ width: 50 }}
-                />
-              </button>
-              <button
-                className="btn"
-                onClick={() => this.handleChoiceColor("red")}
-              >
-                <img
-                  src="./img/car/icons/icon-red.jpg"
-                  alt="hinh"
-                  style={{ width: 50 }}
-                />
-              </button>
-              <button
-                className="btn"
-                onClick={() => this.handleChoiceColor("silver")}
-              >
-                <img
-                  src="./img/car/icons/icon-silver.jpg"
-                  alt="hinh"
-                  style={{ width: 50 }}
-                />
-              </button>
-              <button
-                className="btn"
-                onClick={() => this.handleChoiceColor("steel")}
-              >
-                <img
-                  src="./img/car/icons/icon-steel.jpg"
-                  alt="hinh"
-                  style={{ width: 50 }}
-                />
-              </button>
+              {this.renderBtnColorList()}
             </div>
-            <div className="car mt-2">
-              <img
-                className="img-thumbnail"
-                src={this.state.carImg}
-                alt="hinh"
-              />
-            </div>
+            <Car carImg={this.state.carImg} />
           </div>
         </section>
       </div>

@@ -9,10 +9,19 @@ import ShowRoomCar from "./show-room-car/ShowRoomCar";
 import RenderWithMap from "./render-with-map/RenderWithMap";
 import Parent from "./props/Parent";
 import ShowRoomGlasses from "./show-room-glasses/ShowRoomGlasses";
+import AppXucXac from "./AppXucXac/AppXucXac";
+import Hero from "./Hero/Hero";
+import AppXucXacRedux from "./AppXucXacRedux/AppXucXac";
+import DemoLifiCyleComponent from "./lifecyle-component/DemoLifiCyleComponent";
+import Bt_Components from "./components/Bt_Components";
 
 function App() {
   return (
     <div>
+
+      {/* <AppXucXacRedux /> */}
+
+      <Bt_Components />
       {/* <Header />
       <Carousel />
       <ProductList />
@@ -22,11 +31,18 @@ function App() {
 
       {/* <ShowRoomCar /> */}
 
+      {/* <ShowRoomGlasses /> */}
+
       {/* <RenderWithMap /> */}
 
       {/* <Parent /> */}
 
-      {/* <ShowRoomGlasses /> */}
+      {/* <AppXucXac /> */}
+
+      {/* <Hero /> */}
+
+
+      {/* <DemoLifiCyleComponent /> */}
     </div>
   );
 }
